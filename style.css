@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --grey: #5c5c5c;
+    --black: #2B2B2B;
+    --white: #F2F2F2;
+    --pure-white: #FFF;
+    --regular: 400;
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+}
+
+h1{
+    font-size: 48px;
+    font-weight: var(--bold);
+    text-align: center;
+}
+
+label, #preview-box{
+    font-size: 18px;
+}
+
+.body-wrapper{
+    padding: 4rem 6rem;
+    background-color: var(--black);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.body-wrapper > h1{
+    color: var(--white);
+    letter-spacing: 0.05rem;
+}
+
+.body-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.body-content .shape-wrapper,
+.body-content .slider-wrapper{
+    border-radius: 12px;
+    box-shadow: 6px 16px 40px rgba(255, 255, 255, 0.15);
+}
+
+.body-content .shape-wrapper{
+    background-color: var(--white);
+    max-width: 540px;
+    max-height: 540px;
+    width: 40vw;
+    height: 40vw;
+    min-width: 256px;
+    min-height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-content .slider-wrapper{
+    width: 50%;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--white);
+}
+
+.body-content .slider-wrapper .slider{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.body-content .slider-wrapper .slider > input[type="text"],
+.body-content .slider-wrapper .slider > input[type="number"]{
+    width: 80px;
+    height: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: var(--semi-bold);
+    color: var(--black);
+    text-align: center;
+}
+
+/* Hide Input Number Arrrows */
+.body-content .slider-wrapper .slider > input[type="number"]::-webkit-outer-spin-button,
+.body-content .slider-wrapper .slider > input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.body-content .slider-wrapper .slider #aspect-ratio{
+    width: 64px;
+    height: 32px;
+    text-align: center;
+    font-weight: var(--semi-bold);
+}
+
+.body-content .slider-wrapper .slider > input[type="color"]{
+    border: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.body-content .slider-wrapper .slider > input[type="color"]:hover{
+    border: 1.5px solid var(--black);
+}
+
+.body-content .slider-wrapper .slider > input[type="range"]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background-color: var(--grey);
+}
+
+.body-content .slider-wrapper .slider > input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--black);
+    cursor: pointer;
+}
+
+.body-content .slider-wrapper .preview-box-wrapper{
+    position: relative;
+    padding: 1rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 8px;
+}
+
+.body-content .slider-wrapper .preview-box-wrapper > a{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+@media only screen and (max-width: 1280px) {
+    .body-wrapper{
+        padding: 3rem 4rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    h1{
+        font-size: 32px;
+        padding-top: 4rem;
+    }
+
+    .body-wrapper{
+        padding-bottom: 4rem;
+    }
+
+    .body-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .body-content .shape-wrapper,
+    .body-content .slider-wrapper{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1{
+        padding-top: 2rem;
+    }
+
+    label, #preview-box{
+        font-size: 16px;
+    }
+
+    .body-wrapper{
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .body-content .shape-wrapper,
+    .body-content .slider-wrapper{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    h1{
+        font-size: 24px;
+    }
+
+    label, #preview-box{
+        font-size: 14px;
+    }
+
+    .body-wrapper{
+        padding: 0 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .body-content .slider-wrapper .preview-box-wrapper{
+        padding: 2rem 1rem;
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>CSS Box Shadow</title>
+</head>
+<body>
+    <div class="body-wrapper">
+        <h1>CSS Box Shadow Generator</h1>
+        <div class="body-content">
+            <div class="shape-wrapper" id="shape-wrapper">
+                <div class="shape" id="shape"></div>
+            </div>
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <label for="bg-color">Background Color:</label>
+                    <input type="color" name="background-color" id="bg-color">
+                    <input type="text" name="background-color-hex" id="bg-color-hex">
+                </div>
+                <div class="slider">
+                    <label for="cc-color">Card Color:</label>
+                    <input type="color" name="card-color" id="cc-color">
+                    <input type="text" name="card-color-hex" id="cc-color-hex">
+                </div>
+                <div class="slider">
+                    <label for="sh-color">Shadow Color:</label>
+                    <input type="color" name="shadow-color" id="sh-color">
+                    <input type="text" name="shadow-color-hex" id="sh-color-hex">
+                </div>
+                <div class="slider">
+                    <label for="aspect-ratio">Aspect Ratio:</label>
+                    <select name="aspect-ratio" id="aspect-ratio">
+                        <option value="0" selected>None</option>
+                        <option value="1">1 : 1</option>
+                        <option value="2">3 : 4</option>
+                        <option value="3">9 : 16</option>
+                    </select>
+                </div>
+                <div class="slider">
+                    <label for="width-slider">Width: </label>
+                    <input type="range" name="width" id="width-slider" min="20">
+                    <p id="width-value">100px</p>
+                </div>
+                <div class="slider">
+                    <label for="height-slider">Height: </label>
+                    <input type="range" name="height" id="height-slider" min="20">
+                    <p id="height-value">100px</p>
+                </div>
+                <div class="slider">
+                    <label for="radius-slider">Radius: </label>
+                    <input type="range" name="radius" id="radius-slider" min="0">
+                    <p id="radius-value">50px</p>
+                </div>
+                <div class="slider">
+                    <label for="blur-slider">Blur: </label>
+                    <input type="range" name="blur" id="blur-slider" min="0">
+                    <p id="blur-value">10px</p>
+                </div>
+                <div class="slider">
+                    <label for="x-pos">X: </label>
+                    <input type="number" id="x-pos">
+                    <label for="y-pos">Y: </label>
+                    <input type="number" id="y-pos">
+                </div>
+                <div class="preview-box-wrapper">
+                    <a href="#" onclick="copyToClipboard()">
+                        <img src="./assets/icon-clipboard.svg" alt="Clipboard Icon">
+                    </a>
+                    <div id="preview-box">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
