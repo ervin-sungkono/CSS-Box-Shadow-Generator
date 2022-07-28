@@ -124,6 +124,7 @@ function updateAspectRatio(ev){
             heightRatio = 16;
             break;
     }
+    widthSlider.max = isAspectRatio ? cardMaxWidth*widthRatio/heightRatio : cardMaxWidth;
 }
 
 function keepAspectRatio(width, height){
@@ -227,20 +228,22 @@ function Observe(element, opt, cb){
 //Then, Output the changes on the Preview Box
 const previewBox = _id('preview-box');
 function setPreviewBox(){
-    previewBox.innerHTML = card.getAttribute('style').split(';').join(';</br>');
+    previewBox.innerHTML = card.getAttribute('style').split('; ').join(';\n');
 };
 
 Observe(card,{
     attributesList: ["style"], 
     attributeOldValue: true,
   }, (m) => {
-    previewBox.innerHTML = m.target.getAttribute(m.attributeName).split(';').join(';</br>');
+    previewBox.innerHTML = m.target.getAttribute(m.attributeName).split('; ').join(';\n');
 });
 
 // Copy Styles to Clipboard
 function copyToClipboard(){
-    let copyText = previewBox.innerText;
-    navigator.clipboard.writeText(copyText).then(() => {
+    previewBox.select();
+    previewBox.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(previewBox.value).then(() => {
         alert('Text copied to clipboard!');
     })
 }

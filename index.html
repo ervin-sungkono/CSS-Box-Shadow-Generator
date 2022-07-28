@@ -20,17 +20,17 @@
                 <div class="slider">
                     <label for="bg-color">Background Color:</label>
                     <input type="color" name="background-color" id="bg-color">
-                    <input type="text" name="background-color-hex" id="bg-color-hex">
+                    <input type="text" name="background-color-hex" id="bg-color-hex" readonly>
                 </div>
                 <div class="slider">
                     <label for="cc-color">Card Color:</label>
                     <input type="color" name="card-color" id="cc-color">
-                    <input type="text" name="card-color-hex" id="cc-color-hex">
+                    <input type="text" name="card-color-hex" id="cc-color-hex" readonly>
                 </div>
                 <div class="slider">
                     <label for="sh-color">Shadow Color:</label>
                     <input type="color" name="shadow-color" id="sh-color">
-                    <input type="text" name="shadow-color-hex" id="sh-color-hex">
+                    <input type="text" name="shadow-color-hex" id="sh-color-hex" readonly>
                 </div>
                 <div class="slider">
                     <label for="aspect-ratio">Aspect Ratio:</label>
@@ -68,11 +68,11 @@
                     <input type="number" id="y-pos">
                 </div>
                 <div class="preview-box-wrapper">
-                    <a href="#" onclick="copyToClipboard()">
+                    <a onclick="copyToClipboard()">
                         <img src="./assets/icon-clipboard.svg" alt="Clipboard Icon">
                     </a>
-                    <div id="preview-box">
-                    </div>
+                    <textarea name="preview-box" id="preview-box" rows="5" readonly>
+                    </textarea>
                 </div>
                 
             </div>

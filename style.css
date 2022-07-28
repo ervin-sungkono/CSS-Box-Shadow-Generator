@@ -160,9 +160,19 @@ input[type=number] {
 }
 
 .body-content .slider-wrapper .preview-box-wrapper > a{
+    cursor: pointer;
     position: absolute;
     top: 8px;
     right: 16px;
+}
+
+.body-content .slider-wrapper .preview-box-wrapper #preview-box{
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--white);
 }
 
 @media only screen and (max-width: 1280px) {
