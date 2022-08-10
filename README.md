@@ -2,7 +2,7 @@
 CSS Box Shadow Generator where you can create card with box shadow and play around with the CSS attributes.
 
 <div>
-  <img src="./assets/preview-img.png" alt="Preview Image" width="70%"/>
+  <img src="./assets/preview-img.png" alt="Preview Image" width="480"/>
 </div>
 
 ## Features
